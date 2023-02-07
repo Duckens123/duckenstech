@@ -1,0 +1,128 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--CSS FILES-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="{% static 'articles/css/bootstrap.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'articles/css/bootstrap-icons.css' %}" rel="stylesheet" />
+
+    <link rel="stylesheet" href="{% static 'articles/css/magnific-popup.css' %}" />
+
+    <link href="{% static 'articles/css/aos.css' %}" rel="stylesheet" />
+
+    <link href="{% static 'articles/css/templatemo-nomad-force.css' %}" rel="stylesheet" />
+    <!--END CSS FILES-->
+  </head>
+  <body>
+    <main>
+        <nav class="navbar navbar-expand-lg bg-light shadow-lg">
+            <div class="container">
+              <a class="navbar-brand" href="index.html">
+                <img src="{% static 'articles/images/logo.png' %}" width="250" alt="" />
+              </a>
+    
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+    
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#hero">Home</a>
+                  </li>
+    
+                  <li class="nav-item">
+                    <a class="nav-link" href="#about">Obout us</a>
+                  </li>
+    
+                  <li class="nav-item">
+                    <a class="nav-link" href="#news">News</a>
+                  </li>
+    
+                  <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact Us</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+    </main>
+    <footer class="site-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h5 class="text-white">
+                <i class="bi-geo-alt-fill me-2"></i>
+                Haiti
+              </h5>
+  
+              <a
+                href="mailto:duckensjacquet@gmail.com"
+                class="custom-link mt-3 mb-5"
+              >
+                Duckensjacquet@gmail.com
+              </a>
+            </div>
+  
+            <div class="col-6">
+              <p class="copyright-text mb-0">
+                Copyright © Duckenson Jacquet 2023
+  
+                <br /><br />Design:
+                <a href="https://templatemo.com/page/1" target="_parent"
+                  >Duckens</a
+                >
+              </p>
+            </div>
+  
+            <div class="col-lg-3 col-5 ms-auto">
+              <ul class="social-icon">
+                <li><a href="https://web.facebook.com/duckenson.jacquet/" class="social-icon-link bi-facebook"></a></li>
+  
+                <li><a href="#" class="social-icon-link bi-twitter"></a></li>
+  
+                <li><a href="#" class="social-icon-link bi-whatsapp"></a></li>
+  
+                <li><a href="#" class="social-icon-link bi-instagram"></a></li>
+  
+                <li><a href="#" class="social-icon-link bi-youtube"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="{% static 'articles/js/jquery.min.js' %}"></script>
+    <script src="{% static 'articles/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'articles/js/jquery.sticky.js' %}"></script>
+    <script src="{% static 'articles/js/aos.js' %}"></script>
+    <script src="{% static 'articles/js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'articles/js/magnific-popup-options.js' %}"></script>
+    <script src="{% static 'articles/js/scrollspy.min.js' %}"></script>
+    <script src="{% static 'articles/js/custom.js' %}"></script>
+    <!--END JAVASCRIPT FILES -->
+  </body>
+</html>
