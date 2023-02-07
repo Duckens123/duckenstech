@@ -5,7 +5,8 @@ from articles.models import Article
 # Create your views here.
 def Index(request):
     lastarticle=Article.objects.all().order_by("-id")[0]
-    context={'lastarticle': lastarticle}
+    most_read=Article.objects.all().order_by("-nb_views")[0]
+    context={'lastarticle': lastarticle,'most_read': most_read}
     return render(request, 'articles/index.html',context)
 
 

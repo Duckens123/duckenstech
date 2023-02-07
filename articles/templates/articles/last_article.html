@@ -17,7 +17,7 @@
 
       <div class="news-text-info">
         <h5 class="news-title">
-          <a href="news-detail.html" class="news-title-link"
+          <a href="{% url 'display_article' lastarticle.pk %}" class="news-title-link"
             >{{ lastarticle.title }}</a
           >
         </h5>
