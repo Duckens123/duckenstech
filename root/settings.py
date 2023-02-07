@@ -72,7 +72,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'root.wsgi.application'
-
+CSRF_TRUSTED_ORIGINS =['http://127.0.0.1:8000/','https://duckenstech.vercel.app/']
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
@@ -123,12 +123,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, '/articles/static/')
+STATIC_ROOT = os.path.join(BASE_DIR, '/articles/static/','static')
 STATIC_URL = '/articles/static/'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 STATICFILES_DIRS = [
-    BASE_DIR / "articles/static",
+    BASE_DIR, "articles/static",
+    'static',
 ]
 
 # Default primary key field type
