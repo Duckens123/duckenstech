@@ -129,7 +129,6 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 STATICFILES_DIRS = [
     BASE_DIR, "articles/static",
-    'static',
 ]
 
 # Default primary key field type
