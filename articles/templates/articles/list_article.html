@@ -1,7 +1,7 @@
 {% load static %}
 <section class="news" id="news">
   <div class="container">
-    <div class="row d-flex justify-content-evenly col-md-12">
+    <div class="row d-flex justify-content-start col-md-12">
       
         {% for article in page_obj %}
         <div
@@ -30,14 +30,14 @@
                   >{{article.title}}</a
                 >
               </h5>
-
+              <span class="text-muted bi bi-eye">
+                {{article.nb_views}}</span
+              >
+              <br />
               <span class="text-muted bi bi-calendar">
                 {{article.datepublished}}</span
               >
             </br>
-              <span class="text-muted bi bi-pencil-square">
-                {{article.publishedby}}</span
-              >
             </div>
           </div>
         </div>
