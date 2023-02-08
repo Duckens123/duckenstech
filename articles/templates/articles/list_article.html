@@ -1,0 +1,50 @@
+{% load static %}
+<section class="news section-padding" id="news">
+  <div class="container">
+    <div class="row">
+      <div
+        class="col-lg-12 col-12 news-two-column d-flex flex-column flex-lg-row"
+      >
+        {% for article in articles %}
+        <div
+          class="news-thumb news-two-column d-flex flex-column flex-lg-row"
+          data-aos="fade-up"
+        >
+          <div class="news-top w-100" data-aos="fade-up">
+            <a
+              href="news-detail.html"
+              class="news-image-hover news-image-hover-success"
+            >
+              <img
+                src="{{article.imagethumbnail.url}}"
+                class="img-fluid news-image"
+                alt=""
+              />
+            </a>
+
+            <div class="news-category bg-success text-white">News</div>
+          </div>
+
+          <div class="news-bottom">
+            <div class="news-text-info">
+              <h5 class="news-title">
+                <a href="news-detail.html" class="news-title-link"
+                  >{{article.title}}</a
+                >
+              </h5>
+
+              <span class="text-muted bi bi-calendar">
+                {{article.datepublished}}</span
+              >
+            </br>
+              <span class="text-muted bi bi-pencil-square">
+                {{article.publishedby}}</span
+              >
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
