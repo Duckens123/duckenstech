@@ -6,7 +6,7 @@ from articles.models import Article
 def Index(request):
     lastarticle=Article.objects.all().order_by("-id")[0]
     most_read=Article.objects.all().order_by("-nb_views")[0]
-    articles=Article.objects.all()
+    articles=Article.objects.all().order_by("-id")
     context={'lastarticle': lastarticle,'most_read': most_read,'articles': articles}
     return render(request, 'articles/index.html',context)
 

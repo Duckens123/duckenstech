@@ -123,12 +123,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, '/articles/static/','static')
-STATIC_URL = '/articles/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'articles/static/','static/')
+STATIC_URL = 'articles/static/'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 STATICFILES_DIRS = [
-    BASE_DIR, "articles/static",
+    BASE_DIR, "articles/static/",
 ]
 
 # Default primary key field type
