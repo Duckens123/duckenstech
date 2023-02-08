@@ -3,7 +3,7 @@
   <div class="container">
     <div class="row d-flex justify-content-evenly col-md-12">
       
-        {% for article in articles %}
+        {% for article in page_obj %}
         <div
           class="news-thumb news-two-column d-flex flex-column flex-lg-row col-lg-6"
           data-aos="fade-up"
@@ -42,6 +42,7 @@
           </div>
         </div>
         {% endfor %}
+        {% include 'articles/pagination.html' %}
     </div>
   </div>
 </section>

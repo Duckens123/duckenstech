@@ -14,6 +14,9 @@ from pathlib import Path
 import os
 import dj_database_url
 from decouple import config
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -41,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'articles',
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
@@ -70,6 +74,13 @@ TEMPLATES = [
         },
     },
 ]
+
+cloudinary.config(
+  cloud_name = "dlsisksvi",
+  api_key = "225581542436542",
+  api_secret = "WKQeu5vzSD5PhRVn1unNavuo6lQ",
+  secure = True
+)
 
 WSGI_APPLICATION = 'root.wsgi.application'
 CSRF_TRUSTED_ORIGINS =['http://127.0.0.1:8000/','https://duckenstech.vercel.app/']
