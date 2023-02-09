@@ -370,7 +370,7 @@ strong {
 
 .heroText {
   position: absolute;
-  z-index: 9;
+  z-index: 0;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

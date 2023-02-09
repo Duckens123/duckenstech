@@ -23,6 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.Index),
     path('article/', include('articles.urls')),
+    path('about/', views.About, name='about'),
 ]
 
 if settings.DEBUG:

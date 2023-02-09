@@ -25,3 +25,7 @@ def DisplayArticle(request,id):
     article.nb_views+=1
     article.save()
     return render(request,'articles/display_article.html',{'article' : article})
+
+
+def About(request):
+    return render(request,'articles/display_about.html')

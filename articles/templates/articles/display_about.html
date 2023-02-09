@@ -1,0 +1,98 @@
+{% extends 'articles/root.html' %} 
+{% load static %}
+{% block body %}
+<section class="section-padding pb-0" id="about">
+  <div class="container mb-1 pb-lg-1">
+    <div class="col-12">
+      <h2 class="" data-aos="fade-up">About</h2>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="column">
+      <div class="col-lg-12 col-12 bg-dark">
+        <div
+          class="d-flex flex-column flex-wrap justify-content-center h-100 py-5 px-4 pt-lg-4 pb-lg-0"
+        >
+          <p class="text-white" data-aos="fade-up">
+            Bienvenue sur DuckensTech, votre source de connaissances
+            technologiques fiables et à jour! Nous sommes un blog dédié à la
+            diffusion d'informations sur les dernières tendances, produits et
+            innovations dans le monde de la technologie.
+          </p>
+
+          <p class="text-secondary-white-color" data-aos="fade-up">
+            Notre équipe d'experts en technologie travaille sans relâche pour
+            fournir des articles informatifs, des critiques de produits et des
+            analyses détaillées pour aider les consommateurs à prendre des
+            décisions éclairées lors de l'achat de nouvelles technologies. Nous
+            couvrons une large gamme de sujets, allant des smartphones et des
+            ordinateurs aux objets connectés, en passant par les jeux vidéo, les
+            réseaux sociaux et bien plus encore.
+          </p>
+          <p class="text-secondary-white-color" data-aos="fade-up">
+            Notre engagement envers la qualité et la précision de nos
+            informations signifie que vous pouvez toujours compter sur
+            DuckensTech pour vous fournir les dernières mises à jour
+            technologiques, ainsi que des conseils et astuces pour tirer le
+            meilleur parti de vos appareils. Nous sommes fiers de fournir une
+            plate-forme impartiale pour les débats et les discussions sur les
+            sujets technologiques, et nous aimons entendre les opinions de nos
+            lecteurs.
+          </p>
+          <p class="text-secondary-white-color" data-aos="fade-up">
+            Rejoignez notre communauté en ligne aujourd'hui et découvrez les
+            dernières tendances technologiques avec DuckensTech!
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-12 col-12 p-0">
+        <section
+          id="myCarousel"
+          class="carousel slide carousel-fade"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="{% static 'articles/images/duckens.jpg' %}"
+                class="img-fluid team-image"
+                alt=""
+              />
+
+              <div class="team-thumb bg-primary">
+                <h3 class="text-white mb-0">Duckenson</h3>
+
+                <p class="text-secondary-white-color mb-0">CEO & Investor</p>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
+            <span class="visually-hidden">Previous</span>
+          </button>
+
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#myCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
+            <span class="visually-hidden">Next</span>
+          </button>
+        </section>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
