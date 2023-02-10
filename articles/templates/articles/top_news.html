@@ -17,10 +17,12 @@
         >
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img
+              <a href="{% url 'display_article' lastarticle.pk %}">
+                <img
                 src="{{lastarticle.imagethumbnail.url}}"
                 class="img-fluid team-image"
                 alt=""
+                
               />
 
               <div class="team-thumb bg-primary">
@@ -28,9 +30,11 @@
                 <h6 class="text-white mb-0">{{lastarticle.title}}</h6>
                 <p class="text-secondary-white-color mb-0">{{lastarticle.datepublished}}</p>
               </div>
+              </a>
             </div>
             {% if most_read %}
-            <div class="carousel-item">
+            <a href="{% url 'display_article' most_read.pk %}">
+              <div class="carousel-item">
                 <img
                   src="{{most_read.imagethumbnail.url}}"
                   class="img-fluid team-image news-image"
@@ -43,6 +47,8 @@
                   <p class="text-secondary-white-color mb-0">{{most_read.datepublished}}</p>
                 </div>
               </div>
+            
+            </a>
             {% endif %}
           </div>
 

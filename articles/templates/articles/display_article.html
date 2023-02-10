@@ -1,5 +1,5 @@
 {% extends 'articles/root.html' %} {% block body %} {% if article %}
-<section class="hero section-padding" id="hero">
+<section class="hero" id="hero">
   <!--
   <div class="heroText">
     <h4
@@ -20,14 +20,17 @@
   </div>
   -->
   <div class="videoWrapper">
+    <figure>
     <img
       src="{{article.imagethumbnail.url}}"
       class="img-fluid news-detail-image"
       alt=""
     />
+  </figure>
   </div>
 </section>
-<section class="news-detail section-padding">
+<section class="news-detail">
+  <figcaption class="text-dark text-center fst-italic">{{article.imagecaptions}}</figcaption>
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-10 mx-auto">
