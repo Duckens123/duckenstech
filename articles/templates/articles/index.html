@@ -2,15 +2,19 @@
 {% block body %}
 <section class="news section-padding" id="news">
     <div class="container">
-      <div class="row">
+      <div class="row">       
+        {% include 'articles/top_news.html' %}
         <div class="col-12">
           <h2 class="mb-2 text-center" data-aos="fade-up">News</h2>
         </div>
+       <!--
         {% include 'articles/last_article.html' %}
         {% include 'articles/most_read_article.html' %}
+       -->
       <hr class="col-md-12"></hr>
         {% include 'articles/list_article.html' %}
         {% include 'articles/about.html' %}
+        {% include 'articles/contact.html' %}
       </div>
     </div>
   </section>

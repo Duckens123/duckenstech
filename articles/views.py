@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from articles.models import Article
-from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from articles.models import Article,Contact
+from django.http import HttpResponseRedirect
+from django.urls import reverse
 
 # Create your views here.
 def Index(request):
@@ -17,6 +18,13 @@ def Index(request):
     except EmptyPage:
         page_obj=paginator.page(paginator.num_pages)
     context={'lastarticle': lastarticle,'most_read': most_read,'articles': articles,'page_obj': page_obj}
+    message=Contact()
+    if request.method == 'POST':
+        message.name=request.POST['name']
+        message.email=request.POST['email']
+        message.message=request.POST['message']
+        message.save()
+        return HttpResponseRedirect(reverse('index'))
     return render(request, 'articles/index.html',context)
 
 
@@ -29,3 +37,4 @@ def DisplayArticle(request,id):
 
 def About(request):
     return render(request,'articles/display_about.html')
+

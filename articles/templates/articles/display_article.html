@@ -2,7 +2,7 @@
 <section class="hero section-padding" id="hero">
   <div class="heroText">
     <h4
-      class="news-detail-title text-white mt-lg-5 mb-lg-4"
+      class="news-detail-title text-white mt-lg-5"
       data-aos="zoom-in"
       data-aos-delay="300"
     >
@@ -35,29 +35,21 @@
 
         <div class="social-share d-flex mt-5">
           <span class="me-4" data-aos="zoom-in">Share this article:</span>
-          
+
           <div
             class="fb-share-button"
             data-href="{{request.build_absolute_uri}}"
-            data-layout="button_count"
-            data-size="small"
           >
             <a
               target="_blank"
               href="https://www.facebook.com/sharer/sharer.php?u={{request.build_absolute_uri}}"
-              class="fb-xfbml-parse-ignore"
-              >Partager</a
-            >
+              class="social-share-icon bi-facebook"
+            ></a>
           </div>
           <a
-            href="#"
+            target="_blank"
+            href="https://twitter.com/intent/tweet?url={{request.build_absolute_uri}}"
             class="social-share-icon bi-twitter mx-3"
-            data-aos="zoom-in"
-          ></a>
-
-          <a
-            href="#"
-            class="social-share-icon bi-envelope"
             data-aos="zoom-in"
           ></a>
         </div>
