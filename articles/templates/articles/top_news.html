@@ -1,5 +1,5 @@
 {% load static %}
-{% if lastarticle %}
+
 <section class="pb-0" id="about">
   <div class="container mb-1 pb-lg-1">
     <div class="col-12">
@@ -17,6 +17,7 @@
         >
           <div class="carousel-inner">
             <div class="carousel-item active">
+              {% if lastarticle %}
               <a href="{% url 'display_article' lastarticle.pk %}">
                 <img
                 src="{{lastarticle.imagethumbnail.url}}"
@@ -31,10 +32,12 @@
                 <p class="text-secondary-white-color mb-0">{{lastarticle.datepublished}}</p>
               </div>
               </a>
+              {% endif %}
             </div>
-            {% if most_read %}
-            <a href="{% url 'display_article' most_read.pk %}">
+            
               <div class="carousel-item">
+                {% if most_read %}
+            <a href="{% url 'display_article' most_read.pk %}">
                 <img
                   src="{{most_read.imagethumbnail.url}}"
                   class="img-fluid team-image news-image"
@@ -77,4 +80,3 @@
       </div>
   </div>
 </section>
-{% endif %}

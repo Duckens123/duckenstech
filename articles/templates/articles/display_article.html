@@ -1,39 +1,19 @@
 {% extends 'articles/root.html' %} {% block body %} {% if article %}
-<section class="hero" id="hero">
-  <!--
-  <div class="heroText">
-    <h4
-      class="news-detail-title text-white mt-lg-5"
-      data-aos="zoom-in"
-      data-aos-delay="300"
-    >
-      {{article.title}}
-    </h4>
-
-    <div class="d-flex justify-content-center align-items-center">
-      <span class="text-white bi bi-calendar"> {{article.datepublished}} </span>
-      <br />
-      <span class="text-white bi bi-pencil-square">
-        {{article.publishedby}}</span
-      >
-    </div>
-  </div>
-  -->
-  <div class="videoWrapper">
-    <figure>
-    <img
-      src="{{article.imagethumbnail.url}}"
-      class="img-fluid news-detail-image"
-      alt=""
-    />
-  </figure>
-  </div>
-</section>
 <section class="news-detail">
-  <figcaption class="text-dark text-center fst-italic">{{article.imagecaptions}}</figcaption>
+  
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 col-10 mx-auto">
+      <div class="col-lg-10 col-10 mx-auto mt-2">
+        <figure>
+          <img
+            src="{{article.imagethumbnail.url}}"
+            class="img-fluid"
+            alt=""
+          />
+          <figcaption class="text-dark text-center fst-italic">{{article.imagecaptions}}</figcaption>
+        </figure>
+      </div>
+      <div class="col-lg-10 col-10 mx-auto">
         <h2 class="mb-3" data-aos="fade-up">{{article.title}}</h2>
 
         <p data-aos="fade-up" class="text-dark">{{article.content}}</p>
