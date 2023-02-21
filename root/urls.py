@@ -24,6 +24,7 @@ urlpatterns = [
     path('', views.Index,name='index'),
     path('article/', include('articles.urls')),
     path('about/', views.About, name='about'),
+    path('dbadmin/',include('dbadmin.urls')),
 ]
 
 if settings.DEBUG:

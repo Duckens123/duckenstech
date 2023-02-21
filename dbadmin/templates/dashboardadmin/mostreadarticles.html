@@ -1,0 +1,65 @@
+<h3>Most read articles</h3>
+<table class="table table-dark table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Titre</th>
+        <th scope="col">Article</th>
+        <th scope="col">Dernire modification</th>
+        <th>Views</th>
+        <th colspan="3">Action</th>
+      </tr>
+    </thead>
+    <tbody class="table-group-divider">
+      {% for article in marticles %}
+      <tr>
+        <a href="{" class="stretched-link">
+        <td>{{article.title}}</td>
+        <td>{{article.text|slice:':20'}} ...</td>
+        <td>{{article.lastupdated}}</td>
+        <td>
+          <a href=""  class="btn btn-danger"
+            >Suprimer</a
+          >
+        </td>
+    </a>
+      </tr>
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="staticBackdrop"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                Modal title
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">{{delarticle.pk}}</div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" class="btn btn-primary">Understood</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      {%endfor%}
+    </tbody>
+  </table>
